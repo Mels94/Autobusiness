@@ -61,9 +61,8 @@ class UserController extends BaseController
         $profile = new Profile($_POST);
         $arrProfile = $profile->selectUsersInfo();
         if (!empty($_POST) && isset($_POST['submit'])){
-            $validate = $profile->validate();
             if (!empty($profile->validate())){
-                $this->view->render('/user/profile', [$validate, $arrProfile]);
+                $this->view->render('/user/profile', [$profile->validate(), $arrProfile]);
             }
             if ($profile->updateUsers()){
                 Auth::redirect('/user/profile');

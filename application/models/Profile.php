@@ -70,7 +70,11 @@ class Profile
         if (!$isPass) {
             return ['password' => 'error password'];
         }
+        $email =  $_SESSION['user']['email'];
         foreach ($this->getAllEmail() as $item){
+            if ($item['email'] == $email){
+                continue 1;
+            }
             if ($this->email == $item['email']){
                 return ['email' => 'there is such an email'];
             }

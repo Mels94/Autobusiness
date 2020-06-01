@@ -55,7 +55,7 @@ class Validator
             if (isset($rules['email'])) {
                 $email = $rules['email'];
                 foreach ($email as $key => $value) {
-                    if (!preg_match('#^[a-zA-Z0-9-.]{1,40}+@[a-z]{2,5}+\.[a-z]{2,3}$#', $value)) {
+                    if (!preg_match('#^[a-zA-Z0-9-_.]{1,40}+@[a-z]{2,5}+\.[a-z]{2,3}$#', $value)) {
                         $data[$key] = $key.' error';
                     }
                 }
