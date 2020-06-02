@@ -357,6 +357,18 @@ $(document).ready(function () {
     })
 
 
+    /*----------------credit cart text------------------*/
+    $('.adminCreditCardText').keyup(function() {
+        let foo = $(this).val().split("-").join("");
+        if (foo.length > 0) {
+            foo = foo.match(new RegExp('.{1,4}', 'g')).join("-");
+        }
+        $(this).val(foo);
+    });
+    $('.upper').keyup(function() {
+        this.value = this.value.toUpperCase();
+    });
+
 
 
 });

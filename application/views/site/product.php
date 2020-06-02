@@ -43,7 +43,7 @@
 
                         <div class="col-md-12">
                             <div class="pagination">
-                                <ul class="remove">
+                                <ul>
                                     <li>
                                             <?php
                                             $url = '';
@@ -59,6 +59,9 @@
                                             if (!empty($data[1]) && isset($data[1])){
                                                 $searchProduct_pn = new Pagination(20, "/site/product{$url}", 'product', $data[1]);
                                                 echo $searchProduct_pn->getPaginationLink();
+                                            }elseif (isset($data[1]) && $data[1] == 0){
+                                                $product_pn = new Pagination(20, "/site/product{$url}", 'product', 0);
+                                                echo $product_pn->getPaginationLink();
                                             }else{
                                                 $product_pn = new Pagination(20, "/site/product{$url}", 'product');
                                                 echo $product_pn->getPaginationLink();

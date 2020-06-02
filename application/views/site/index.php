@@ -200,7 +200,7 @@
                                     <div class="col-md-12">
                                         <div class="input-select">
                                             <select name="brand" id="brand">
-                                                <option value="">Select Band</option>
+                                                <option value="">Select Category</option>
                                                 <?php foreach (\application\components\GlobalData::allCategory() as $key => $item): ?>
                                                     <option value="<?= $item['id']; ?>"><?= $item['name']; ?></option>
                                                 <?php endforeach; ?>

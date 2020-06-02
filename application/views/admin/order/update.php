@@ -82,14 +82,14 @@
                             </button>
                         </div>
 
-                        <input type="text" name="name_card" class="form-control mt-4" placeholder="Name on Card*"
+                        <input type="text" name="name_card" class="form-control mt-4 upper" placeholder="Name on Card*"
                                value="<?php if (!empty($data) && isset($data[1][0]['name_card'])) {
                                    echo $data[1][0]['name_card'];
                                } ?>">
                         <small><?php if (!empty($data) && isset($data[0]['name_card'])) {
                                 echo $data[0]['name_card'];
                             } ?></small>
-                        <input type="text" name="card_number" class="form-control mt-4" placeholder="Card Number*"
+                        <input type="text" name="card_number" class="form-control mt-4 adminCreditCardText" placeholder="Card Number*"
                                value="<?php if (!empty($data) && isset($data[1][0]['card_num'])) {
                                    echo $data[1][0]['card_num'];
                                } ?>">
